@@ -17,6 +17,16 @@
   - Addresses stale metadata updates and version ordering
   - Adds regression testing for concurrent synchronization
   - **Under review**
+    
+- **[Ceph #71143](https://github.com/ceph/ceph/pull/71143)** - Validate the cached version on metadata sync reads.
+  - Fixes durable stale metadata on secondary zones (e.g. `403 AccessDenied` from an obsolete owner) caused by a lost cache-invalidation notification
+  - Adds expected-version parameters to sync GET requests, and fixes `link_bucket()` writing entrypoints with an empty version tag
+  - **Under review**
+  - 
+- **[Ceph #71349](https://github.com/ceph/ceph/pull/71349)** - Fix manifest end iterators before tail rule start.
+  - Fixes an integer underflow in `RGWObjManifest::obj_iterator` for small objects fully contained in the head chunk
+  - Added unit test coverage
+  - **Under review**
 
 <!--
 **SaravananPalanisamyRWTH/SaravananPalanisamyRWTH** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
