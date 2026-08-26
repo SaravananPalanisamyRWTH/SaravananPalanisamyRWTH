@@ -22,7 +22,7 @@
   - Fixes durable stale metadata on secondary zones (e.g. `403 AccessDenied` from an obsolete owner) caused by a lost cache-invalidation notification
   - Adds expected-version parameters to sync GET requests, and fixes `link_bucket()` writing entrypoints with an empty version tag
   - **Under review**
-  - 
+    
 - **[Ceph #71349](https://github.com/ceph/ceph/pull/71349)** - Fix manifest end iterators before tail rule start.
   - Fixes an integer underflow in `RGWObjManifest::obj_iterator` for small objects fully contained in the head chunk
   - Added unit test coverage
